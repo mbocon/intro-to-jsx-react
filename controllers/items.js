@@ -92,11 +92,11 @@ itemsRouter.post('/items', (req, res) => {
 
 // edit route
 itemsRouter.get('/items/:id/edit', (req, res) => {
-    Item.findById(req.params.id, (err, foundItem) => {
+    Item.findById(req.params.id, (err, itemToEdit) => {
         if (err) {
              res.status(500).send(err.message);
         } else {
-            // res.render('Edit.jsx', { item: foundItem });
+            // res.render('Edit.jsx', { item: itemToEdit });
             res.json(foundItem);
         }
     })

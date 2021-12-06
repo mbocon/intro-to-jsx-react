@@ -22,8 +22,8 @@ db.on('connected', () => console.log('Connected to MongoDB'));
 db.on('error', (err) => console.log('MongoDB Error: ' + err.message));
 
 // setting up view engine
-// TODO: Setup JSX as view engine! //
-// npm i express-react-views react react-dom
+// TODO: Setup JSX as view engine //
+// npm i express-react-views react react-dom 
 
 // mount middleware
 app.use(express.urlencoded({ extended: false })); // creates req.body

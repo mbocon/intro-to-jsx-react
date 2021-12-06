@@ -107,10 +107,16 @@ const MyComponent = () => {
 # Let's begin!
 <br>
 
-- Clone this repository
+- Clone this repository by copy/pasting the following code into your terminal:
+  
+   ```
+   git clone https://github.com/mbocon/intro-to-jsx-react.git
+   ```
 - Create a .env file and add your environment variables for `PORT` and `DATABASE_URL`.
 - Run `npm i` to install dependencies.
-- Open server.js file (review the code)
-- Lets npm i `express-react-views` and `react` and `react-dom`
+- Open in VS Code and review the starter code.
+- Let's install `express-react-views` & `react` & `react-dom`
     - `express-react-views` is an npm package that allows you to server side render React components.
     - More on `express-react-views`  [here](https://github.com/reactjs/express-react-views)
+    - ERV requires `react` & `react-dom` as peer dependencies.
+    - 
