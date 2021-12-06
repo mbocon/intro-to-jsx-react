@@ -9,8 +9,6 @@
 
 - JSX makes code easier to read and write.
 - JSX allows you to use all the power and syntax features of JavaScript that you're used to.
-- It prevents injection attacks!
-    - According to the docs: "By default, React DOM escapes any values embedded in JSX before rendering them. Thus it ensures that you can never inject anything that’s not explicitly written in your application. Everything is converted to a string before being rendered. This helps prevent XSS (cross-site-scripting) attacks."
 - React recommends using JSX.
 - JSX provides syntatic sugar for the `React.createElement()` function.
 
@@ -119,4 +117,4 @@ const MyComponent = () => {
     - `express-react-views` is an npm package that allows you to server side render React components.
     - More on `express-react-views`  [here](https://github.com/reactjs/express-react-views)
     - ERV requires `react` & `react-dom` as peer dependencies.
-    - 
+- 
