@@ -40,7 +40,7 @@ const element = React.createElement(
 );
 ```
 
-That code is compiled by [Babel](https://babeljs.io/docs/en/) to:
+That code is compiled to:
 
 ```js
 const element = {
