@@ -113,8 +113,16 @@ const MyComponent = () => {
 - Create a .env file and add your environment variables for `PORT` and `DATABASE_URL`.
 - Run `npm i` to install dependencies.
 - Open in VS Code and review the starter code.
-- Let's install `express-react-views` & `react` & `react-dom`
+- Once you've familiarized yourself with the code base, install `express-react-views` along with `react` & `react-dom`
     - `express-react-views` is an npm package that allows you to server side render React components.
     - More on `express-react-views`  [here](https://github.com/reactjs/express-react-views)
     - ERV requires `react` & `react-dom` as peer dependencies.
-- 
+
+<br>
+
+Paste the following code into your terminal:
+
+```npm i express-react-views react react-dom```
+
+Next, start the server and check that your server is running and you've successfully connected to your mongoDB database.
+
