@@ -8,14 +8,14 @@ const itemSchema = new Schema({
         type: String,
         required: true
     },
-    description: {
+    notes: {
         type: String
     },
     qty: {
         type: Number,
     },
     price: {
-        type: Schema.Types.Decimal128,
+        type: Number,
     }
 }, {
     timestamps: true

@@ -1,3 +1,7 @@
+/*************************************************************/
+/******************** UNIVERSAL STYLES ***********************/
+/*************************************************************/
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +14,221 @@ body {
     flex-direction: column;
 }
 
-#App {
+:is(header, footer) {
+    background-color: #e4e4e4;
+    min-height: 8vh;
+    box-shadow: 0 0 5px #000;
+    display: flex;
+}
+
+
+/*************************************************************/
+/******************** BUTTON/INPUT STYLES **********************/
+/*************************************************************/
+
+:is(.edit-btn, .delete-btn, .new-form-btn) {
+    color: black;
+    padding: 0.25rem 1rem;
+    border: 1px solid black;
+    height: 2rem;
+    width: 5rem;
+    margin-top: 1rem;
+    opacity: 0.8;
+}
+
+:is(.edit-btn:hover, .delete-btn:hover, .new-form-btn:hover) {
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 1;
+}
+
+.edit-btn {
+    background-color: orange;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.delete-btn {
+    background-color: red;
+}
+
+.new-form-btn {
+    background-color: green;
+    color: white;
+}
+
+/*************************************************************/
+/****************** HEADER SECTION STYLES ********************/
+/*************************************************************/
+
+
+header {
+    justify-content: center;
+    padding: 1rem;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: #555555;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+nav>ul {
+    display: flex;
+    padding: 1rem;
+    list-style: none;
+}
+
+nav>ul>li {
+    margin-right: 1rem;
+}
+
+/*************************************************************/
+/******************* MAIN SECTION STYLES *********************/
+/*************************************************************/
+
+#app {
     flex-grow: 1;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*************************************************************/
+/******************** INDEX PAGE STYLES **********************/
+/*************************************************************/
+
+.index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    background-color: rgb(211, 211, 211);
+    box-shadow: 0 0 5px #000;
+}
+
+.index>h1 {
+    margin-bottom: 2rem;
+}
+
+.index-ul,
+.list-items {
+    list-style: none;
+    margin:  1rem;;
+}
+
+.index-ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.index-ul >.list-items > a {
+    text-decoration: none;
+    color: #000;
+    background: #ffc;
+    display: block;
+    height: 10em;
+    width: 10em;
+    padding: 1em;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.index-ul .list-items:nth-child(even) a{
+    transform:rotate(5deg);
+    position:relative;
+    top:5px;
+  }
+  .index-ul .list-items:nth-child(odd) a{
+    transform:rotate(-5deg);
+    position:relative;
+    top:-5px;
+  }
+
+
+/*************************************************************/
+/****************** NEW PAGE STYLES ********************/
+/*************************************************************/
+
+.new {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new>h1 {
+    margin-bottom: 2rem;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    background-color: #f0f0f0;
+    padding: 2rem;
+    box-shadow: 0 0 5px #000;
+
+}
+
+.form-content>label {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.form-content>label>input {
+    width: 100%;
+}
+
+/*************************************************************/
+/******************** SHOW PAGE STYLES **********************/
+/*************************************************************/
+
+.show {
+    text-decoration: none;
+    color: #000;
+    background: #ffc;
+    display: block;
+    height: 15em;
+    width: 15em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    transform: rotate(3deg);
+}
+
+.options {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/*************************************************************/
+/****************** FOOTER SECTION STYLES ********************/
+/*************************************************************/
+
+
+footer {
+    justify-content: center;
+    align-items: center;
 }

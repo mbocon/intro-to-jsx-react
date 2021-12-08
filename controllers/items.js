@@ -6,25 +6,25 @@ itemsRouter.get('/seed', async (req, res) => {
     const data = [
         {
             name: 'Milk',
-            description: '2% fat',
+            notes: '2% fat',
             qty: 1,
             price: 8.99,
         },
         {
             name: 'Eggs',
-            description: 'A dozen',
+            notes: 'A dozen',
             qty: 1,
             price: 5.99,
         },
         {
             name: 'Bread',
-            description: 'Whole grain',
+            notes: 'Whole grain',
             qty: 2,
             price: 3.99,
         },
         {
             name: 'Cheese',
-            description: 'Cheddar',
+            notes: 'Cheddar',
             qty: 1,
             price: 7.99,
         },
@@ -43,7 +43,7 @@ itemsRouter.get('/', (req, res) => {
 itemsRouter.get('/items', (req, res) => {
     Item.find({}, (err, items) => {
         if (err) {
-           res.status(500).send(err.message);
+            res.status(500).send(err.message);
         } else {
             // res.render('Index.jsx', { items: items });
             res.json(items);
@@ -71,7 +71,7 @@ itemsRouter.delete('/items/:id', (req, res) => {
 itemsRouter.put('/items/:id', (req, res) => {
     Item.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedItem) => {
         if (err) {
-             res.status(500).send(err.message);
+            res.status(500).send(err.message);
         } else {
             res.redirect(`/items/${req.params.id}`);
         }
@@ -82,7 +82,7 @@ itemsRouter.put('/items/:id', (req, res) => {
 itemsRouter.post('/items', (req, res) => {
     Item.create(req.body, (err, createdItem) => {
         if (err) {
-             res.status(500).send(err.message);
+            res.status(500).send(err.message);
         } else {
             res.redirect('/items');
         }
@@ -94,10 +94,10 @@ itemsRouter.post('/items', (req, res) => {
 itemsRouter.get('/items/:id/edit', (req, res) => {
     Item.findById(req.params.id, (err, itemToEdit) => {
         if (err) {
-             res.status(500).send(err.message);
+            res.status(500).send(err.message);
         } else {
             // res.render('Edit.jsx', { item: itemToEdit });
-            res.json(foundItem);
+            res.json(itemToEdit);
         }
     })
 })
@@ -106,7 +106,7 @@ itemsRouter.get('/items/:id/edit', (req, res) => {
 itemsRouter.get('/items/:id', (req, res) => {
     Item.findById(req.params.id, (err, foundItem) => {
         if (err) {
-             res.status(500).send(err.message);
+            res.status(500).send(err.message);
             // res.send(err.message);
         } else {
             // res.render('Show.jsx', { item: foundItem });
