@@ -45,8 +45,8 @@ itemsRouter.get('/items', (req, res) => {
         if (err) {
             res.status(500).send(err.message);
         } else {
-            // res.render('Index.jsx', { items: items });
-            res.json(items);
+            res.render('Index.jsx', { items: items });
+            // res.json(items);
         }
     })
 })
@@ -96,8 +96,8 @@ itemsRouter.get('/items/:id/edit', (req, res) => {
         if (err) {
             res.status(500).send(err.message);
         } else {
-            // res.render('Edit.jsx', { item: itemToEdit });
-            res.json(itemToEdit);
+            res.render('Edit.jsx', { item: itemToEdit });
+            // res.json(itemToEdit);
         }
     })
 })
@@ -109,8 +109,8 @@ itemsRouter.get('/items/:id', (req, res) => {
             res.status(500).send(err.message);
             // res.send(err.message);
         } else {
-            // res.render('Show.jsx', { item: foundItem });
-            res.json(foundItem);
+            res.render('Show.jsx', { item: foundItem });
+            // res.json(foundItem);
         }
     })
 })

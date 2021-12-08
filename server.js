@@ -22,8 +22,9 @@ db.on('connected', () => console.log('Connected to MongoDB'));
 db.on('error', (err) => console.log('MongoDB Error: ' + err.message));
 
 // set up view engine middleware
-// TODO: Setup JSX as view engine 
-// install view engine dependencies - npm i express-react-views react react-dom 
+app.set('views', __dirname + '/views') // sets the views directory as the folder from which express will grab our templates.
+app.set('view engine', 'jsx') // sets the view enging to jsx.
+app.engine('jsx', require('express-react-views').createEngine()) // creates the jsx engine
 
 // mount middleware
 app.use(express.urlencoded({ extended: false })); // creates req.body

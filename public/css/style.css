@@ -126,7 +126,7 @@ nav>ul>li {
 }
 
 .index-ul,
-.list-items {
+.list-item {
     list-style: none;
     margin:  1rem;;
 }
@@ -137,7 +137,7 @@ nav>ul>li {
     justify-content: center;
 }
 
-.index-ul >.list-items > a {
+.index-ul >.list-item > a {
     text-decoration: none;
     color: #000;
     background: #ffc;
@@ -152,12 +152,12 @@ nav>ul>li {
     align-items: center;
 }
 
-.index-ul .list-items:nth-child(even) a{
+.index-ul .list-item:nth-child(even) a{
     transform:rotate(5deg);
     position:relative;
     top:5px;
   }
-  .index-ul .list-items:nth-child(odd) a{
+  .index-ul .list-item:nth-child(odd) a{
     transform:rotate(-5deg);
     position:relative;
     top:-5px;
